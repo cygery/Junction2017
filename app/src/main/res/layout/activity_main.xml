@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.movesense.samples.connectivityapisample.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TextView
+            android:text="Development"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp" />
+
+        <Switch
+            android:visibility="gone"
+            android:checked="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Live mode"
+            android:id="@+id/liveSwitch"
+            android:layout_margin="8dp"/>
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ignore time restriction"
+            android:checked="true"
+            android:id="@+id/ignoreTimeSwitch"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/simulateDawnButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Simulate dawn"
+            android:visibility="visible" />
+
+        <TextView
+            android:text="Dawn simulator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp" />
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enabled"
+            android:id="@+id/dawnSimulatorSwitch"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:enabled="false"
+            android:id="@+id/timepickerDawnSimulatorButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="13:37"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/x_axis_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/y_axis_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/z_axis_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/int1_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/int2_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Movesense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/buttonScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onScanClicked"
+            android:layout_margin="8dp"
+            android:text="Scan"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/buttonScanStop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onScanStopClicked"
+            android:layout_margin="8dp"
+            android:text="Stop Scan"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+            <ListView
+                android:id="@+id/listScanResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" />
+        </ScrollView>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
